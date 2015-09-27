@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+    <string name="app_name">MyInstagram</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_comments">CommentsActivity</string>
+    <string name="title_activity_user_profile">CommentsActivity</string>
+
+
+    <plurals name="like_count">
+        <item quantity="one">%d likes</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+
+    <string-array name="user_photos">
+        <item>http://guo.lu/wp-content/uploads/2013/09/wallpaper-1974024-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2012/11/wallpaper-2451291-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/11/wallhaven-102471-300x180.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/05/wallpaper-2849709-300x168.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2015/01/wwlovemmx_074-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/09/wallpaper-1974024-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/12/wallpaper-1712483-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2015/02/wallhaven-56233-300x188.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/03/wallpaper-2625514-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2012/12/wallpaper-2306118.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/05/wallpaper-2778436-300x168.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/06/wallpaper-2845846.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/03/wallpaper-2625514-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/05/homonculus_by_osagentg-d63t3wm-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2012/12/wallpaper-2306118.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/07/wallpaper-2256134.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/11/wallhaven-28075-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/03/wallpaper-2625514-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/09/wallpaper-1974024-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2012/11/wallpaper-2451291-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/11/wallhaven-102471-300x180.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/05/wallpaper-2849709-300x168.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2015/01/wwlovemmx_074-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/09/wallpaper-1974024-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/12/wallpaper-1712483-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2015/02/wallhaven-56233-300x188.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/03/wallpaper-2625514-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2012/12/wallpaper-2306118.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/05/wallpaper-2778436-300x168.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/06/wallpaper-2845846.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/03/wallpaper-2625514-300x169.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/05/homonculus_by_osagentg-d63t3wm-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2012/12/wallpaper-2306118.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/07/wallpaper-2256134.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2014/11/wallhaven-28075-300x187.jpg</item>
+        <item>http://guo.lu/wp-content/uploads/2013/03/wallpaper-2625514-300x169.jpg</item>
+    </string-array>
+
+    <string name="user_profile_photo">
+        http://guo.lu/wp-content/uploads/2012/11/wallpaper-2423691.jpg</string>
+</resources>
