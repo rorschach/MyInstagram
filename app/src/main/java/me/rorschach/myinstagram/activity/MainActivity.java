@@ -3,7 +3,10 @@ package me.rorschach.myinstagram.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +18,8 @@ import android.view.Menu;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Toast;
+
+import java.io.File;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -60,7 +65,7 @@ public class MainActivity extends BaseDrawerActivity
         if (savedInstanceState == null) {
             pendingIntroAnimation = true;
         } else {
-            feedAdapter.updateItems(10, false);
+            feedAdapter.updateItems(10, true);
         }
     }
 
@@ -87,6 +92,49 @@ public class MainActivity extends BaseDrawerActivity
     @OnClick(R.id.fabCreate)
     public void clickFab() {
         Toast.makeText(this, "Take Photos", Toast.LENGTH_SHORT).show();
+//        launchCamera();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
+            if (requestCode == RESULT_OK) {
+                Uri photoUri = getPhotoFileUri(photoFileName);
+                Log.d("TAG", photoUri.getPath().toString());
+            }
+        }
+    }
+
+    public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
+    public String photoFileName = "photo.jpg";
+
+    private void launchCamera() {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, getPhotoFileUri(photoFileName));
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+        }
+    }
+
+    private Uri getPhotoFileUri(String fileName) {
+        if (isExteralStorageAvalibale()) {
+            File dir = new File(
+                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                    "picture");
+
+            if (!dir.exists() && !dir.mkdirs()) {
+                Log.d("TAG", "failed to create directory");
+            }
+            Log.d("TAG", Uri.fromFile(new File(dir.getPath() + File.separator + fileName)).toString());
+            return Uri.fromFile(new File(dir.getPath() + File.separator + fileName));
+        } else {
+            return null;
+        }
+    }
+
+    private boolean isExteralStorageAvalibale() {
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     private void setupFeed() {

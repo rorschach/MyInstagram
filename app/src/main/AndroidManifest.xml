@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.rorschach.myinstagram">
+<manifest package="me.rorschach.myinstagram"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <uses-feature
         android:name="android.hardware.camera2"
-        android:required="true" />
+        android:required="true"/>
 
     <uses-feature
         android:name="android.hardware.camera2.front"
@@ -17,7 +17,7 @@
 
     <uses-feature
         android:name="android.hardware.camera2.focus"
-        android:required="false" />
+        android:required="false"/>
 
     <application
         android:allowBackup="true"
@@ -29,27 +29,27 @@
             android:launchMode="singleInstance"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.CommentsActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.TransparentActivity" />
+            android:theme="@style/AppTheme.TransparentActivity"/>
         <activity
             android:name=".activity.UserProfileActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.TransparentActivity" />
+            android:theme="@style/AppTheme.TransparentActivity"/>
 
         <activity
             android:name=".activity.TakePhotoActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.TransparentActivity.FullScreen" />
+            android:theme="@style/AppTheme.TransparentActivity.FullScreen"/>
 
     </application>
 
